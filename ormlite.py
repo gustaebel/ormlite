@@ -708,7 +708,7 @@ class Query(_BaseQuery):
         return " where " + " ".join(self._where) if self._where else ""
 
     def prepare_order_by(self):
-        return " order by " + " ".join(self._order) if self._order else ""
+        return " order by " + ", ".join(self._order) if self._order else ""
 
     def prepare_limit(self):
         if self._limit is not None:
